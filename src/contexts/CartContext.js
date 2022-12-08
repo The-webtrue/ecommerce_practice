@@ -45,12 +45,12 @@ const CartProvider = ({children}) => {
       }
     });
     setCart(newCart);
-    toast.success(`Added Successfuly ${cartItem.amount + 1} times`)
+    toast.success(`Added Successfully ${cartItem.amount + 1} times`)
    
    }
    else{
     setCart([...cart, newItem]);
-    toast.success('Added Successfuly')
+    toast.success('Added Successfully')
    }
   };
   
@@ -60,10 +60,12 @@ const CartProvider = ({children}) => {
       return item.id !== id;
     })
     setCart(newCart);
+    toast.success('Item Deleted Successfully');
   }
   //cclear cart
   const clearCart = ()=>{
     setCart([]);
+    toast.success('Cart Clear Successfully');
   };
 
   // incrase amount
