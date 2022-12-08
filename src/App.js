@@ -5,6 +5,9 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Home from './pages/Home';
 import ProductDetails from './pages/ProductDetails';
+// toast import
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   return <div className='overflow-hidden'>
@@ -17,6 +20,7 @@ const App = () => {
       <Sidebar/>
       <Footer/>
     </Router>
+    <ToastContainer />
   </div>;
 };
 

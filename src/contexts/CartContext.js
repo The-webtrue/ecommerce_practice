@@ -1,4 +1,5 @@
 import React, {createContext, useState, useEffect} from 'react';
+import { toast } from 'react-toastify';
 
 // create context
 export const CartContext = createContext();
@@ -44,9 +45,12 @@ const CartProvider = ({children}) => {
       }
     });
     setCart(newCart);
+    toast.success(`Added Successfuly ${cartItem.amount + 1} times`)
+   
    }
    else{
-    setCart([...cart, newItem])
+    setCart([...cart, newItem]);
+    toast.success('Added Successfuly')
    }
   };
   
